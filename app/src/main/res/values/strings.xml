@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Expresso</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="userprofile1">https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png</string>
+    <string name="userprofile2">https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-128.png</string>
+
+    <string name="username1">John</string>
+    <string name="username2">Danny</string>
+    <string-array name="feedlist">
+        <item name="1">http://hd.wallpaperswide.com/thumbs/the_avengers_age_of_ultron_team-t1.jpg</item>
+        <item name="2">http://hd.wallpaperswide.com/thumbs/mortal_kombat_x_scorpion-t1.jpg</item>
+        <item name="3">http://hd.wallpaperswide.com/thumbs/black_cubes_3-t1.jpg</item>
+        <item name="4">http://hd.wallpaperswide.com/thumbs/wet_grass_bokeh_summer-t1.jpg</item>
+        <item name="5">http://hd.wallpaperswide.com/thumbs/the_queen_of_darkness-t1.jpg</item>
+        <item name="6">http://hd.wallpaperswide.com/thumbs/ginkgo_leaves-t1.jpg</item>
+        <item name="7">http://hd.wallpaperswide.com/thumbs/hulk_6-t1.jpg</item>
+        <item name="8">http://hd.wallpaperswide.com/thumbs/spring_landscape-t1.jpg</item>
+        <item name="9">http://hd.wallpaperswide.com/thumbs/private_penguins_of_madagascar-t1.jpg</item>
+        <item name="10">http://hd.wallpaperswide.com/thumbs/big_hero_6_movie_baymax-t1.jpg</item>
+    </string-array>
+
+    <string-array name="feedtitlelist">
+        <item name="1">the_avengers_age_of_ultron_team-t1</item>
+        <item name="2">mortal_kombat_x_scorpion-t1</item>
+        <item name="3">black_cubes_3-t1</item>
+        <item name="4">wet_grass_bokeh_summer-t1</item>
+        <item name="5">the_queen_of_darkness-t1</item>
+        <item name="6">ginkgo_leaves-t1</item>
+        <item name="7">hulk_6-t1</item>
+        <item name="8">spring_landscape-t1</item>
+        <item name="9">private_penguins_of_madagascar-t1</item>
+        <item name="10">big_hero_6_movie_baymax-t1</item>
+    </string-array>
+</resources>

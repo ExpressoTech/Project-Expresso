@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <bitmap
+            android:gravity="center|fill_vertical"
+            android:src="@drawable/restaurant"/>
+        <selector android:constantSize="true">
+           <item/>
+            </selector>
+    </item>
+</layer-list>
