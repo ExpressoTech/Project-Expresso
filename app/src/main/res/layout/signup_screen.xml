@@ -52,18 +52,35 @@
                 android:paddingLeft="@dimen/side_padding"
                 android:paddingRight="@dimen/side_padding"/>
 
-            <EditText
-                android:id="@+id/et_signup_passwd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/normal"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:background="@color/empty"
-                android:paddingLeft="@dimen/side_padding"
-                android:paddingRight="@dimen/side_padding"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"/>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_signup_passwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/normal"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:background="@color/empty"
+                    android:paddingLeft="@dimen/side_padding"
+                    android:paddingRight="@dimen/side_padding"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/checkbox_showPass"
+                    android:button="@drawable/eye_checkbox"
+                    android:layout_marginTop="15dp"/>
+
+            </RelativeLayout>
 
             <ImageView
                 android:layout_width="match_parent"
