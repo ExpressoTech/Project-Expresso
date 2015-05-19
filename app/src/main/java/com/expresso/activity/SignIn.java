@@ -45,7 +45,7 @@ public class SignIn extends Activity implements View.OnClickListener{
     private void getWidgetReferences() {
         btn_signin= (Button) findViewById(R.id.btn_signin);
         et_login_email= (EditText) findViewById(R.id.login_email);
-        et_login_passwd= (EditText) findViewById(R.id.login_passwd);
+        et_login_passwd= (EditText) findViewById(R.id.et_login_passwd);
         login_chkbox_showPass= (CheckBox) findViewById(R.id.login_checkbox_showPass);
     }
 
