@@ -47,6 +47,7 @@ public class SignUp extends Activity implements View.OnClickListener{
         et_signup_email= (EditText) findViewById(R.id.et_signup_email);
         et_signup_passwd= (EditText) findViewById(R.id.et_signup_passwd);
         et_signup_first_name= (EditText) findViewById(R.id.et_signup_first_name);
+        et_signup_last_name= (EditText) findViewById(R.id.et_signup_last_name);
         chkbox_showPass= (CheckBox) findViewById(R.id.checkbox_showPass);
     }
 

@@ -3,10 +3,14 @@ package com.expresso.activity;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,6 +32,7 @@ public class SignIn extends Activity implements View.OnClickListener{
     Button btn_signin;
     EditText et_login_email,et_login_passwd;
     ProgressDialog pd;
+    CheckBox login_chkbox_showPass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,10 +46,30 @@ public class SignIn extends Activity implements View.OnClickListener{
         btn_signin= (Button) findViewById(R.id.btn_signin);
         et_login_email= (EditText) findViewById(R.id.login_email);
         et_login_passwd= (EditText) findViewById(R.id.login_passwd);
+        login_chkbox_showPass= (CheckBox) findViewById(R.id.login_checkbox_showPass);
     }
 
     private void bindWidgetEvents() {
         btn_signin.setOnClickListener(this);
+        et_login_passwd.setTypeface(Typeface.DEFAULT);
+        login_chkbox_showPass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    int pos = et_login_passwd.getSelectionStart();
+                    et_login_passwd.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    et_login_passwd.setSelection(pos);
+                    et_login_passwd.setTypeface(Typeface.DEFAULT);
+                    //et_login_passwd.setTransformationMethod(new PasswordTransformationMethod());
+                } else {
+                    int pos = et_login_passwd.getSelectionStart();
+                    et_login_passwd.setInputType(129);
+                    et_login_passwd.setSelection(pos);
+                    et_login_passwd.setTypeface(Typeface.DEFAULT);
+                    //et_login_passwd.setTransformationMethod(null);
+                }
+            }
+        });
     }
 
     private void initialization() {
