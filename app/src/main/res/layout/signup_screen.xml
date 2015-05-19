@@ -2,11 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/restaurant"
         android:scaleType="centerCrop"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,14 +54,16 @@
                 android:paddingLeft="@dimen/side_padding"
                 android:paddingRight="@dimen/side_padding"/>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:gravity="center_vertical">
 
                 <EditText
                     android:id="@+id/et_signup_passwd"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
+                    android:scrollHorizontally="true"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/normal"
                     android:hint="Password"
@@ -68,19 +72,26 @@
                     android:paddingLeft="@dimen/side_padding"
                     android:paddingRight="@dimen/side_padding"
                     android:paddingTop="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="10dp"
+                    android:layout_alignParentLeft="true"/>
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="20dp"
-                    android:layout_gravity="center_vertical"
-                    android:id="@+id/checkbox_showPass"
-                    android:button="@drawable/eye_checkbox"
-                    android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
 
-            </RelativeLayout>
+                    <CheckBox
+                        android:id="@+id/checkbox_showPass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:button="@drawable/eye_checkbox"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
