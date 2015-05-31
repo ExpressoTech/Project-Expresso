@@ -2,11 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/restaurant"
         android:scaleType="centerCrop"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,18 +54,50 @@
                 android:paddingLeft="@dimen/side_padding"
                 android:paddingRight="@dimen/side_padding"/>
 
-            <EditText
-                android:id="@+id/et_signup_passwd"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/normal"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:background="@color/empty"
-                android:paddingLeft="@dimen/side_padding"
-                android:paddingRight="@dimen/side_padding"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"/>
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="10">
+
+                    <EditText
+                        android:id="@+id/et_signup_passwd"
+                        android:layout_width="wrap_content"
+                        android:scrollHorizontally="true"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/normal"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:background="@color/empty"
+                        android:paddingLeft="@dimen/side_padding"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_showPass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/side_padding"
+                        android:button="@drawable/eye_checkbox"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"

@@ -3,10 +3,15 @@ package com.expresso.activity;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -23,10 +28,11 @@ import java.util.List;
 /**
  * Created by Akshay M on 4/5/2015.
  */
-public class SignUp extends Activity implements View.OnClickListener{
+public class SignUp extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener{
     Button btn_signup;
     EditText et_signup_email,et_signup_passwd,et_signup_first_name,et_signup_last_name;
     ProgressDialog pd;
+    CheckBox chkbox_showPass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +47,19 @@ public class SignUp extends Activity implements View.OnClickListener{
         et_signup_email= (EditText) findViewById(R.id.et_signup_email);
         et_signup_passwd= (EditText) findViewById(R.id.et_signup_passwd);
         et_signup_first_name= (EditText) findViewById(R.id.et_signup_first_name);
+        et_signup_last_name= (EditText) findViewById(R.id.et_signup_last_name);
+        chkbox_showPass= (CheckBox) findViewById(R.id.checkbox_showPass);
     }
 
     private void bindWidgetEvents() {
         btn_signup.setOnClickListener(this);
+        chkbox_showPass.setOnCheckedChangeListener(this);
+
     }
 
     private void initialization() {
         pd=new ProgressDialog(this);
+        et_signup_passwd.setTypeface(Typeface.DEFAULT);
     }
 
     @Override
@@ -56,6 +67,22 @@ public class SignUp extends Activity implements View.OnClickListener{
         new SignUpTask().execute();
     }
 
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked) {
+            int pos = et_signup_passwd.getSelectionStart();
+            et_signup_passwd.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            et_signup_passwd.setSelection(pos);
+            et_signup_passwd.setTypeface(Typeface.DEFAULT);
+            //et_signup_passwd.setTransformationMethod(new PasswordTransformationMethod());
+        } else {
+            int pos = et_signup_passwd.getSelectionStart();
+            et_signup_passwd.setInputType(129);
+            et_signup_passwd.setSelection(pos);
+            et_signup_passwd.setTypeface(Typeface.DEFAULT);
+            //et_signup_passwd.setTransformationMethod(null);
+        }
+    }
 
     private class SignUpTask extends AsyncTask<String, Void, JSONObject> {
 

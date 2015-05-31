@@ -3,10 +3,14 @@ package com.expresso.activity;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -24,10 +28,11 @@ import java.util.List;
 /**
  * Created by Akshay M on 4/5/2015.
  */
-public class SignIn extends Activity implements View.OnClickListener{
+public class SignIn extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener{
     Button btn_signin;
     EditText et_login_email,et_login_passwd;
     ProgressDialog pd;
+    CheckBox login_chkbox_showPass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,15 +45,18 @@ public class SignIn extends Activity implements View.OnClickListener{
     private void getWidgetReferences() {
         btn_signin= (Button) findViewById(R.id.btn_signin);
         et_login_email= (EditText) findViewById(R.id.login_email);
-        et_login_passwd= (EditText) findViewById(R.id.login_passwd);
+        et_login_passwd= (EditText) findViewById(R.id.et_login_passwd);
+        login_chkbox_showPass= (CheckBox) findViewById(R.id.login_checkbox_showPass);
     }
 
     private void bindWidgetEvents() {
         btn_signin.setOnClickListener(this);
+        login_chkbox_showPass.setOnCheckedChangeListener(this);
     }
 
     private void initialization() {
         pd=new ProgressDialog(this);
+        et_login_passwd.setTypeface(Typeface.DEFAULT);
     }
 
     @Override
@@ -56,6 +64,22 @@ public class SignIn extends Activity implements View.OnClickListener{
             new SignInTask().execute();
     }
 
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked) {
+            int pos = et_login_passwd.getSelectionStart();
+            et_login_passwd.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            et_login_passwd.setSelection(pos);
+            et_login_passwd.setTypeface(Typeface.DEFAULT);
+            //et_login_passwd.setTransformationMethod(new PasswordTransformationMethod());
+        } else {
+            int pos = et_login_passwd.getSelectionStart();
+            et_login_passwd.setInputType(129);
+            et_login_passwd.setSelection(pos);
+            et_login_passwd.setTypeface(Typeface.DEFAULT);
+            //et_login_passwd.setTransformationMethod(null);
+        }
+    }
 
     private class SignInTask extends AsyncTask<String, Void, JSONObject> {
 
@@ -97,7 +121,6 @@ public class SignIn extends Activity implements View.OnClickListener{
 
         @Override
         protected void onProgressUpdate(Void... values) {
-
         }
     }
 }
