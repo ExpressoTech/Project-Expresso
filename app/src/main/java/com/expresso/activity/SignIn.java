@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Created by Akshay M on 4/5/2015.
  */
-public class SignIn extends Activity implements View.OnClickListener{
+public class SignIn extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener{
     Button btn_signin;
     EditText et_login_email,et_login_passwd;
     ProgressDialog pd;
@@ -51,29 +51,12 @@ public class SignIn extends Activity implements View.OnClickListener{
 
     private void bindWidgetEvents() {
         btn_signin.setOnClickListener(this);
-        et_login_passwd.setTypeface(Typeface.DEFAULT);
-        login_chkbox_showPass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
-                    int pos = et_login_passwd.getSelectionStart();
-                    et_login_passwd.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    et_login_passwd.setSelection(pos);
-                    et_login_passwd.setTypeface(Typeface.DEFAULT);
-                    //et_login_passwd.setTransformationMethod(new PasswordTransformationMethod());
-                } else {
-                    int pos = et_login_passwd.getSelectionStart();
-                    et_login_passwd.setInputType(129);
-                    et_login_passwd.setSelection(pos);
-                    et_login_passwd.setTypeface(Typeface.DEFAULT);
-                    //et_login_passwd.setTransformationMethod(null);
-                }
-            }
-        });
+        login_chkbox_showPass.setOnCheckedChangeListener(this);
     }
 
     private void initialization() {
         pd=new ProgressDialog(this);
+        et_login_passwd.setTypeface(Typeface.DEFAULT);
     }
 
     @Override
@@ -81,6 +64,22 @@ public class SignIn extends Activity implements View.OnClickListener{
             new SignInTask().execute();
     }
 
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked) {
+            int pos = et_login_passwd.getSelectionStart();
+            et_login_passwd.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            et_login_passwd.setSelection(pos);
+            et_login_passwd.setTypeface(Typeface.DEFAULT);
+            //et_login_passwd.setTransformationMethod(new PasswordTransformationMethod());
+        } else {
+            int pos = et_login_passwd.getSelectionStart();
+            et_login_passwd.setInputType(129);
+            et_login_passwd.setSelection(pos);
+            et_login_passwd.setTypeface(Typeface.DEFAULT);
+            //et_login_passwd.setTransformationMethod(null);
+        }
+    }
 
     private class SignInTask extends AsyncTask<String, Void, JSONObject> {
 
@@ -122,7 +121,6 @@ public class SignIn extends Activity implements View.OnClickListener{
 
         @Override
         protected void onProgressUpdate(Void... values) {
-
         }
     }
 }

@@ -20,7 +20,8 @@
     <include
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        layout="@layout/toolbar_layout"></include>
+        layout="@layout/toolbar_layout"
+        />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -34,12 +35,11 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:layout_weight="2">
 
@@ -96,11 +96,20 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/express_thumb1"
+                            android:layout_width="@dimen/thumbnail_size"
+                            android:layout_height="@dimen/thumbnail_size"
+                            android:src="@drawable/ic_launcher"
+                            app:border_width="2dp"
+                            app:border_color="@color/theme"/>
+
+                        <!--ImageView
+                            android:id="@+id/express_thumb1"
                             android:layout_width="@dimen/thumbnail_size"
                             android:layout_height="@dimen/thumbnail_size"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_launcher"/>
+                            android:src="@drawable/ic_launcher"/-->
 
                     </LinearLayout>
 
@@ -110,11 +119,20 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/express_thumb2"
+                            android:layout_width="@dimen/thumbnail_size"
+                            android:layout_height="@dimen/thumbnail_size"
+                            android:src="@drawable/ic_launcher"
+                            app:border_width="2dp"
+                            app:border_color="@color/theme"/>
+
+                        <!--ImageView
+                            android:id="@+id/express_thumb2"
                             android:layout_width="@dimen/thumbnail_size"
                             android:layout_height="@dimen/thumbnail_size"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_launcher"/>
+                            android:src="@drawable/ic_launcher"/-->
 
                     </LinearLayout>
 
@@ -124,11 +142,20 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/express_thumb3"
+                            android:layout_width="@dimen/thumbnail_size"
+                            android:layout_height="@dimen/thumbnail_size"
+                            android:src="@drawable/ic_launcher"
+                            app:border_width="2dp"
+                            app:border_color="@color/theme"/>
+
+                        <!--ImageView
+                            android:id="@+id/express_thumb3"
                             android:layout_width="@dimen/thumbnail_size"
                             android:layout_height="@dimen/thumbnail_size"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_launcher"/>
+                            android:src="@drawable/ic_launcher"/-->
 
                     </LinearLayout>
 
@@ -138,11 +165,20 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/express_thumb4"
+                            android:layout_width="@dimen/thumbnail_size"
+                            android:layout_height="@dimen/thumbnail_size"
+                            android:src="@drawable/ic_launcher"
+                            app:border_width="2dp"
+                            app:border_color="@color/theme"/>
+
+                        <!--ImageView
+                            android:id="@+id/express_thumb4"
                             android:layout_width="@dimen/thumbnail_size"
                             android:layout_height="@dimen/thumbnail_size"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_launcher"/>
+                            android:src="@drawable/ic_launcher"/-->
 
                     </LinearLayout>
 
@@ -152,11 +188,20 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal">
 
-                        <ImageView
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/express_thumb5"
+                            android:layout_width="@dimen/thumbnail_size"
+                            android:layout_height="@dimen/thumbnail_size"
+                            android:src="@drawable/ic_launcher"
+                            app:border_width="2dp"
+                            app:border_color="@color/theme"/>
+
+                        <!--ImageView
+                            android:id="@+id/express_thumb5"
                             android:layout_width="@dimen/thumbnail_size"
                             android:layout_height="@dimen/thumbnail_size"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_launcher"/>
+                            android:src="@drawable/ic_launcher"/-->
 
                     </LinearLayout>
 
@@ -164,70 +209,79 @@
 
             </RelativeLayout>
 
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="fill_parent"
                 android:layout_height="0dp"
-                android:layout_weight="5">
+                android:gravity="center"
+                android:layout_weight="9"
+                android:padding="5dp">
 
-            <LinearLayout
-                android:id="@+id/img_container"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:weightSum="1">
+                <!--ImageView
+                    android:id="@+id/iv_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/restaurant"
+                    android:adjustViewBounds="true"
+                    android:padding="7dp"
+                    android:background="@color/white"/-->
 
                 <ImageView
                     android:id="@+id/express_iv1"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
-                    android:layout_weight="1"/>
+                    android:adjustViewBounds="true"
+                    android:padding="7dp"/>
 
                 <ImageView
                     android:id="@+id/express_iv2"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
-                    android:layout_weight="1"/>
+                    android:adjustViewBounds="true"
+                    android:padding="7dp"/>
 
                 <ImageView
                     android:id="@+id/express_iv3"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
-                    android:layout_weight="1"/>
+                    android:adjustViewBounds="true"
+                    android:padding="7dp"/>
 
                 <ImageView
                     android:id="@+id/express_iv4"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
-                    android:layout_weight="1"/>
+                    android:adjustViewBounds="true"
+                    android:padding="7dp"/>
 
                 <ImageView
                     android:id="@+id/express_iv5"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher"
-                    android:layout_weight="1"/>
+                    android:adjustViewBounds="true"
+                    android:padding="7dp"/>
 
-            </LinearLayout>
-
-            </HorizontalScrollView>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_weight="2">
 
                 <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/btn_gallery"
+                    android:scaleType="fitCenter"
+                    android:padding="10dp"
+                    android:src="@drawable/abc_ic_menu_copy_mtrl_am_alpha"
+                    android:background="@color/gplus_red"/>
+
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btn_gallery"
+                    android:id="@+id/btn_done"
                     android:src="@drawable/ic_launcher2"/>
 
             </LinearLayout>
