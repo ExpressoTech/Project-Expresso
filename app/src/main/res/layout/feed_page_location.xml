@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <AutoCompleteTextView
+        android:id="@+id/et_feedLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="@dimen/margin_large"
+        android:focusableInTouchMode="true"
+        android:text="" >
+    </AutoCompleteTextView>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/btn_Next"
+        android:background="@color/red"
+        android:padding="@dimen/padding_large"
+        android:layout_margin="@dimen/margin_large"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="91dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_locations"
+        android:layout_below="@+id/et_feedLocation"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btn_Next" />
+</RelativeLayout>

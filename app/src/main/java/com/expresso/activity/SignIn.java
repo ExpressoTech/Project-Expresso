@@ -21,6 +21,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import Managers.LoginManager;
+
 /**
  * Created by Akshay M on 4/5/2015.
  */
@@ -28,6 +30,7 @@ public class SignIn extends Activity implements View.OnClickListener{
     Button btn_signin;
     EditText et_login_email,et_login_passwd;
     ProgressDialog pd;
+    private LoginManager mManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +51,7 @@ public class SignIn extends Activity implements View.OnClickListener{
     }
 
     private void initialization() {
+        mManager=new LoginManager(this);
         pd=new ProgressDialog(this);
     }
 
@@ -77,6 +81,7 @@ public class SignIn extends Activity implements View.OnClickListener{
             try {
                 if(result.getString("status").equalsIgnoreCase("Success"))
                 {
+                    mManager.saveUserInfo(result);
                     finish();
                     Intent i=new Intent(SignIn.this,MainActivity.class);
                     startActivity(i);

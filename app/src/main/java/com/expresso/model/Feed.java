@@ -4,7 +4,8 @@ package com.expresso.model;
  * Created by Akshay on 4/8/2015.
  */
 public class Feed {
-    String feed_age,user_name,user_avatar,feed_title,feed_image,feed_views,feed_location,feed_comments;
+      String feed_age,user_name,user_avatar,feed_title,feed_image,feed_views,feed_location,feed_geometry;
+      int feedID;
 
     public void setFeed_age(String feed_age)
     {
@@ -69,12 +70,20 @@ public class Feed {
         return feed_location;
     }
 
-    public void setFeed_comments(String feed_comments)
+    public void setFeed_geometry(String feed_geometry)
     {
-        this.feed_comments=feed_comments;
+        this.feed_geometry=feed_geometry;
     }
-    public String getFeed_comments()
+    public String getFeed_geometry()
     {
-        return feed_comments;
+        return feed_geometry;
+    }
+
+    public void setFeedID(int feedID) {
+        this.feedID = feedID;
+    }
+
+    public int getFeedID() {
+        return feedID;
     }
 }

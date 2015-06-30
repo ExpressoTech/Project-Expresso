@@ -51,6 +51,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
             public void onPageScrollStateChanged(int state) {
             }
         });
+
+        viewPager.setOffscreenPageLimit(4);
 	}
 
 

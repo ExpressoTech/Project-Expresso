@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <include
+            android:id="@+id/toolbar_header"
+            layout="@layout/toolbar_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"></include>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2">
+
+            <ImageView
+                android:id="@+id/iv_endstory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/endstory" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_endstory"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/padding_large"
+                android:text="Please rate your experience"
+                android:textColor="@android:color/black" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mainContent"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.6">
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottomContent"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2">
+
+            <EditText
+                android:id="@+id/et_feedTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="@drawable/border_textview"
+                android:hint="Story Title"
+                android:textColorHint="@color/red"
+                android:textColor="@color/red"
+                android:padding="@dimen/padding_large" />
+
+            <Button
+                android:id="@+id/btn_renderStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_feedTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="@drawable/solidborder_textview"
+                android:padding="@dimen/padding_large"
+                android:text="Render Story"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    </ScrollView>

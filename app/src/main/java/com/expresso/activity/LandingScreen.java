@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import Managers.LoginManager;
+
 /**
  * Created by Akshay M on 4/5/2015.
  */
@@ -15,9 +17,19 @@ public class LandingScreen extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_screen);
+        checkForLoggedInUsers();
         getWidgetReferences();
         bindWidgetEvents();
         initialization();
+    }
+
+    private void checkForLoggedInUsers() {
+        if(new LoginManager(getApplicationContext()).isLoggedIn())
+        {
+            finish();
+            Intent i=new Intent(LandingScreen.this,MainActivity.class);
+            startActivity(i);
+        }
     }
 
     private void getWidgetReferences() {
