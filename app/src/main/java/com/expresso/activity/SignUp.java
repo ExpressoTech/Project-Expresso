@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.expresso.Managers.LoginManager;
 import com.expresso.utils.Constant;
 import com.expresso.utils.JSONParser;
 
@@ -35,6 +36,7 @@ public class SignUp extends Activity implements View.OnClickListener{
     ProgressDialog pd;
     ImageView iv_userImage;
     private String fileurl="";
+    private LoginManager mManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,7 @@ public class SignUp extends Activity implements View.OnClickListener{
 
     private void initialization() {
         pd=new ProgressDialog(this);
+        mManager=new LoginManager(this);
     }
 
     @Override
@@ -87,6 +90,7 @@ public class SignUp extends Activity implements View.OnClickListener{
             parameters.add(new BasicNameValuePair(Constant.USEREMAIL, et_signup_email.getText().toString()));
             parameters.add(new BasicNameValuePair(Constant.USERPASSWORD, et_signup_passwd.getText().toString()));
             parameters.add(new BasicNameValuePair(Constant.USERNAME, et_signup_first_name.getText().toString()));
+            parameters.add(new BasicNameValuePair(LoginManager.DEVICETOKEN,mManager.getDeviceToken()));
             if(!fileurl.equalsIgnoreCase(""))
                 json = jsonParser.getJSONWithImageUpload(Constant.SIGNUPURL, parameters,fileurl);
             else

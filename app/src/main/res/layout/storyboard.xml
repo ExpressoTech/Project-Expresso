@@ -1,59 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:orientation="vertical">
+    android:layout_height="match_parent" >
 
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar_header"
-        layout="@layout/toolbar_layout"></include>
-
-    <include
-        layout="@layout/user_feed_header"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"></include>
-
-    <com.daimajia.slider.library.SliderLayout
-        android:id="@+id/slider"
+    <!-- Header aligned to top -->
+    <LinearLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        custom:auto_cycle="true"
-        custom:indicator_visibility="visible"
-        custom:pager_animation="CubeIn"
-        custom:pager_animation_span="500" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center" >
 
-    <com.daimajia.slider.library.Indicators.PagerIndicator
-        android:id="@+id/custom_indicator"
-        android:layout_width="wrap_content"
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_header"
+            layout="@layout/toolbar_layout"></include>
+
+        <include
+            layout="@layout/user_feed_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"></include>
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation="CubeIn"
+            custom:pager_animation_span="500" />
+
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            custom:selected_color="#0095BF"
+            custom:selected_height="6dp"
+            custom:selected_padding_left="5dp"
+            custom:selected_padding_right="5dp"
+            custom:selected_width="6dp"
+            custom:shape="oval"
+            custom:unselected_color="#55333333"
+            custom:unselected_height="6dp"
+            custom:unselected_padding_left="5dp"
+            custom:unselected_padding_right="5dp"
+            custom:unselected_width="6dp" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Daffodils 23"
+            android:drawableLeft="@drawable/clock"
+            android:padding="@dimen/padding_medium"
+            android:textColor="@android:color/black"
+            android:drawablePadding="@dimen/padding_large"/>
+  </LinearLayout>
+
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        custom:selected_color="#0095BF"
-        custom:selected_height="6dp"
-        custom:selected_padding_left="5dp"
-        custom:selected_padding_right="5dp"
-        custom:selected_width="6dp"
-        custom:shape="oval"
-        custom:unselected_color="#55333333"
-        custom:unselected_height="6dp"
-        custom:unselected_padding_left="5dp"
-        custom:unselected_padding_right="5dp"
-        custom:unselected_width="6dp" />
+        android:background="#FC0"
+        android:gravity="center" >
 
-    <TextView
-        android:id="@+id/tv_location"
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="What have you got to Ask ?"
+                android:gravity="center"
+                android:background="@color/red"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_large"/>
+
+
+    </RelativeLayout>
+
+    <!-- Scrollable Item below header and above footer -->
+
+    <ListView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Daffodils 23"
-        android:drawableLeft="@drawable/clock"
-        android:padding="@dimen/padding_medium"
-        android:textColor="@android:color/black"
-        android:drawablePadding="@dimen/padding_large"/>
-</LinearLayout>
+        android:layout_height="fill_parent"
+        android:id="@+id/commentsListview"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:dividerHeight="10dp"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@android:color/white"
+        android:layout_weight="6"></ListView>
+
+
+
+</RelativeLayout>

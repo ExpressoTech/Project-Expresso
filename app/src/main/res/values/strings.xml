@@ -13,6 +13,12 @@
     <string name="username2">Danny</string>
     <string name="selectTag">Please Select a Tag</string>
     <string name="endStory">End Story</string>
+    <string name="pleasewait">Please Wait</string>
+    <string name="post">Post</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_reply_success">Reply Added Successfully</string>
+    <string name="gcm_defaultSenderId">136099422022</string>
+    <string name="add_reply">Add your reply</string>
     <string-array name="feedlist">
         <item name="1">http://hd.wallpaperswide.com/thumbs/the_avengers_age_of_ultron_team-t1.jpg</item>
         <item name="2">http://hd.wallpaperswide.com/thumbs/mortal_kombat_x_scorpion-t1.jpg</item>

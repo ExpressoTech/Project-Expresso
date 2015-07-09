@@ -6,11 +6,22 @@ package com.expresso.model;
 public class LocationModel {
     String locationName,locationAddress,locationGeometry;
 
-    public LocationModel(String locationName,String locationAddress,String locationGeometry)
+    public Float getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Float distance) {
+        this.distance = distance;
+    }
+
+    Float distance;
+
+    public LocationModel(String locationName,String locationAddress,String locationGeometry,Float distance)
     {
         this.locationName=locationName;
         this.locationAddress=locationAddress;
         this.locationGeometry=locationGeometry;
+        this.distance=distance;
     }
     public String getLocationAddress() {
         return locationAddress;

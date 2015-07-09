@@ -32,7 +32,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:id="@+id/fb_btn"
+            android:id="@+id/facebookLinearButton"
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -43,7 +43,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/fb_icon_2"
+                android:src="@drawable/facebook"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"/>
             <TextView
@@ -60,7 +60,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:id="@+id/gplus_btn"
+            android:id="@+id/googlePlusLinearButton"
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -72,7 +72,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/gplus_icon"
+                android:src="@drawable/google"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"/>
             <TextView

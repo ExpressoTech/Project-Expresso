@@ -12,35 +12,52 @@ import java.util.List;
 public class Constant {
 
 
-        public static final String SERVERURL = "http://expresso.netne.net/expresso/";
-    public static final String SIGNINURL = SERVERURL+"signin.php";
-    public static final String SIGNUPURL = SERVERURL+"signup.php";
-    public static final String LOCATIONAPI="https://maps.googleapis.com/maps/api/place/search/json?";
-    public static final String LOCATIONURL2 ="&radius=2000&types=restaurant&sensor=false&key=AIzaSyAB-dwfPHYylEYEUn0Bg74lB1ogi-jCKBs" ;
-    public static final String CREATEFEED_URL = SERVERURL+"createFeeds.php";
-    public static final String FETCHFEEDSURL = SERVERURL+"fetchFeed.php";
+    public static final String SERVERURL = "http://expresso.netne.net/expresso/";
+    public static final String SIGNINURL = SERVERURL + "signin.php";
+    public static final String SIGNUPURL = SERVERURL + "signup.php";
+    public static final String LOCATIONAPI = "https://maps.googleapis.com/maps/api/place/search/json?";
+    public static final String LOCATIONURL2 = "&radius=500&types=restaurant&sensor=false&key=AIzaSyAB-dwfPHYylEYEUn0Bg74lB1ogi-jCKBs";
+    public static final String CREATEFEED_URL = SERVERURL + "createFeeds.php";
+    public static final String FETCHFEEDSURL = SERVERURL + "fetchFeed.php";
+    public static final String POST_COMMENT_URL = SERVERURL + "createComment.php";
+    public static final String FETCHFEED_COMMENT_URL = SERVERURL + "fetchFeedComment.php";
+    public static final String POST_COMMENT_REPLY_URL = SERVERURL + "createReply.php";
+    public static final String FETCHFEED_COMMENT_REPLY_URL = SERVERURL + "fetchCommentReply.php";
+
     public static final String IMAGEPATH = "imagepath";
-    public static final String AVATAR = "Avatar" ;
+    public static final String AVATAR = "avatar";
+    public static final String PLATFORM = "platform";
+    public static final String ANDROID_PLATFORM = "android";
+    public static final String MODE = "mode";
+    public static final String FACEBOOK = "facebook";
+    public static final String GOOGLEPLUS = "googleplus";
+    public static final String SOCIALMEDIAID = "socialMediaId";
+    public static final String FEEDCOMMENT = "feedcomment";
+    public static final String USERID = "userId";
+    public static final String COMMENT = "comment";
+    public static final String FLAG = "flag";
+    public static final String REPLY = "reply";
+    public static final String COMMENTID ="referenceId" ;
 
-
-    public static String USEREMAIL="userEmail";
-    public static String USERPASSWORD="password";
+    public static String USEREMAIL = "userEmail";
+    public static String USERPASSWORD = "password";
     public static final String USERNAME = "userName";
-    public static String FEEDID="feedID";
-    public static String FEEDLOCATION="feedLocation";
-    public static String FEEDCOVERPIC="feedCoverpic";
+    public static String FEEDID = "feedID";
+    public static String FEEDLOCATION = "feedLocation";
+    public static String FEEDCOVERPIC = "feedCoverpic";
 
     public static void setFeedID(Context context, long feedID) {
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putInt(FEEDID,(int)feedID).commit();
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putInt(FEEDID, (int) feedID).commit();
     }
 
     public static int getFeedID(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getInt(FEEDID,0);
+        return PreferenceManager.getDefaultSharedPreferences(context).getInt(FEEDID, 0);
     }
 
     public static void saveLocation(Context context, String s) {
         PreferenceManager.getDefaultSharedPreferences(context).edit().putString(FEEDLOCATION, s).commit();
     }
+
     public static String getFeedLocation(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context).getString(FEEDLOCATION, "");
     }
@@ -64,5 +81,5 @@ public class Constant {
     public static final String PHOTO_ALBUM = "express";
 
     // supported file formats
-    public static final List<String> FILE_EXTN = Arrays.asList("jpg", "jpeg","png");
+    public static final List<String> FILE_EXTN = Arrays.asList("jpg", "jpeg", "png");
 }

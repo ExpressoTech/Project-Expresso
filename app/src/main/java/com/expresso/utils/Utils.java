@@ -12,16 +12,23 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.media.ExifInterface;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.expresso.Managers.LoginManager;
 import com.expresso.activity.FeedPageLocation;
+import com.expresso.activity.R;
 import com.expresso.model.FeedAttachment;
+import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.google.android.gms.iid.InstanceID;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -40,6 +47,7 @@ import java.util.Locale;
 public class Utils {
 
 
+    private static ProgressDialog progressdialog;
     ProgressDialog progressDialog;
 
     public static void showToast(Activity activity, String toast) {
@@ -326,5 +334,54 @@ public class Utils {
             imagePaths.add(item.getFeed_url());
         }
         return imagePaths;
+    }
+
+    public static void showProgress(Context context,String message)
+    {
+        progressdialog=new ProgressDialog(context);
+        progressdialog.setTitle(R.string.app_name);
+        progressdialog.setMessage(message);
+        progressdialog.setCancelable(false);
+        progressdialog.show();
+
+    }
+
+    public static void closeProgress()
+    {
+        if(progressdialog!=null)
+        {
+            progressdialog.dismiss();
+            progressdialog=null;
+        }
+    }
+
+    //Obtaining a registration token for GCM
+    public static void registerInBackground(final Context context) {
+        new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... params) {
+                String regId = "";
+
+                InstanceID instanceID = InstanceID.getInstance(context);
+                try {
+                    regId = instanceID.getToken(context.getString(R.string.gcm_defaultSenderId),
+                            GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                return regId;
+            }
+
+            @Override
+            protected void onPostExecute(String regId) {
+                if (!TextUtils.isEmpty(regId)) {
+                    Log.d("GCM", "Registered with GCM Server successfully. RegID: " + regId);
+                    PreferenceManager.getDefaultSharedPreferences(context).edit().putString(LoginManager.DEVICETOKEN,regId).commit();
+                } else {
+                    Log.d("GCM", "Reg ID Creation Failed!!!");
+                }
+            }
+        }.execute(null, null, null);
     }
 }

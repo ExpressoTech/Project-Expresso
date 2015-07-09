@@ -22,6 +22,7 @@ import com.expresso.activity.StoryBoard;
 import com.expresso.adapter.FeedAdapter;
 import com.expresso.database.DatabaseHelper;
 import com.expresso.model.Feed;
+import com.expresso.model.FeedComment;
 import com.expresso.utils.Constant;
 import com.expresso.utils.JSONParser;
 import com.expresso.utils.Utils;
@@ -41,6 +42,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     private ListView listview_feeds;
     private FeedAdapter adpater;
     private ArrayList<Feed> feedList;
+    private ArrayList<FeedComment> feedCommentList;
     private Resources res;
     private ImageView iv_newFeed;
     private ProgressDialog pd;
@@ -71,7 +73,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
 
     private void getWidgetReferences() {
-
         listview_feeds= (ListView) view.findViewById(R.id.listview_feeds);
         iv_newFeed= (ImageView) view.findViewById(R.id.iv_newFeed);
     }
@@ -143,6 +144,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 if(json.getString("status").equalsIgnoreCase("Success"))
                 {
                     setUpFetchFeeds(json);
+          //          setUpFetchFeedComments(json);
                 }
                 else {
                     Toast.makeText(getActivity().getApplicationContext(), json.getString("message"), Toast.LENGTH_LONG).show();
@@ -164,6 +166,38 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         }
     }
 
+    private void setUpFetchFeedComments(JSONObject json) {
+        try {
+            feedCommentList=new ArrayList<FeedComment>();
+            JSONArray resultArray=json.getJSONArray("resultArray");
+            for(int i=0;i<resultArray.length();i++)
+            {
+                JSONObject jsonResult=resultArray.getJSONObject(i);
+                try {
+                JSONArray jsonCommentArray=jsonResult.getJSONArray("feedComment");
+                    if (jsonCommentArray != null) {
+                        for (int j = 0; j < jsonCommentArray.length(); j++) {
+                            JSONObject comment = jsonCommentArray.getJSONObject(j);
+                            JSONObject userComment = comment.getJSONObject("CommentUserData");
+                            FeedComment item = new FeedComment();
+                            item.setComment(comment.getString("Comment"));
+                            item.setName(userComment.getString("CommentCreatedByName"));
+                            item.setAvatar(userComment.getString("CommentCreatedByAvatar"));
+                            feedCommentList.add(item);
+                        }
+                    }
+                }catch (JSONException e)
+                {
+                    e.printStackTrace();
+                    FeedComment item = new FeedComment();
+                    item.setComment("False");
+                    feedCommentList.add(item);
+                }
+            }
+        } catch (JSONException e) {
+        }
+    }
+
     private void setUpFetchFeeds(JSONObject json) {
         try {
             feedList=new ArrayList<Feed>();
@@ -174,13 +208,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                 JSONObject data= jsonResult.getJSONObject("FeedData");
                 JSONObject userdata= jsonResult.getJSONObject("feedUserData");
                 Feed item=new Feed();
-                item.setUser_name(userdata.getString("FeedCreatedByName"));
-                item.setUser_avatar(userdata.getString("FeedCreatedByAvatar"));
-                item.setFeed_image(data.getString("images"));
-                item.setFeed_title(data.getString("title"));
-                item.setFeed_age(data.getString("createdAt"));
-                item.setFeed_location(data.getString("place"));
-                item.setFeedID(Integer.parseInt(data.getString("feedId")));
+                    item.setUser_name(userdata.getString("FeedCreatedByName"));
+                    item.setUser_avatar(userdata.getString("FeedCreatedByAvatar"));
+                    item.setFeed_image(data.getString("images"));
+                    item.setFeed_title(data.getString("title"));
+                    item.setFeed_age(data.getString("createdAt"));
+                    item.setFeed_location(data.getString("place"));
+                    item.setFeedID(Integer.parseInt(data.getString("feedId")));
                 feedList.add(item);
             }
             db.saveAllFeeds(json);

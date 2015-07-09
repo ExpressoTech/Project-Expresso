@@ -14,27 +14,31 @@ import android.os.IBinder;
 
 public class LocationService extends Service implements LocationListener {
 
-    protected LocationManager locationManager;
+    private static LocationManager locationManager;
     Location location;
 
     private static final long MIN_DISTANCE_FOR_UPDATE = 10;
     private static final long MIN_TIME_FOR_UPDATE = 1000 * 60 * 2;
 
     public LocationService(Context context) {
-        locationManager = (LocationManager) context
-                .getSystemService(LOCATION_SERVICE);
+        locationManager = (LocationManager) context.getSystemService(LOCATION_SERVICE);
     }
 
     public Location getLocation(String provider) {
-        if (locationManager.isProviderEnabled(provider)) {
             locationManager.requestLocationUpdates(provider,
                     MIN_TIME_FOR_UPDATE, MIN_DISTANCE_FOR_UPDATE, this);
             if (locationManager != null) {
                 location = locationManager.getLastKnownLocation(provider);
-                return location;
             }
-        }
-        return null;
+        return location;
+    }
+
+    public static boolean isGPSServiceEnabled(String provider)
+    {
+        if (locationManager.isProviderEnabled(provider))
+            return true;
+        else
+            return false;
     }
 
     @Override

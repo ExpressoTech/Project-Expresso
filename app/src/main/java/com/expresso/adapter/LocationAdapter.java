@@ -41,8 +41,7 @@ public class LocationAdapter extends ArrayAdapter<LocationModel>{
             holder = (ViewHolder) convertView.getTag();
         }
 
-
-        holder.tv_name.setText(item.getLocationName());
+        holder.tv_name.setText(item.getLocationName()+" "+item.getDistance());
         holder.tv_address.setText(item.getLocationAddress());
 
         return convertView;

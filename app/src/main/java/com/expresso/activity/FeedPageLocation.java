@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -22,6 +23,7 @@ import com.expresso.database.DatabaseHelper;
 import com.expresso.model.LocationModel;
 import com.expresso.service.LocationService;
 import com.expresso.utils.Constant;
+import com.expresso.utils.GPSTracker;
 import com.expresso.utils.JSONParser;
 import com.expresso.utils.Utils;
 
@@ -31,6 +33,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class FeedPageLocation extends Activity implements View.OnClickListener {
@@ -45,6 +49,10 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
     ProgressDialog pd;
     private int selectedPosition=-1;
     private DatabaseHelper db;
+    private static final int ENABLE_GPS = 100;
+    private Location mainLocation;
+    // GPSTracker class
+    GPSTracker gps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,16 +84,23 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
     private void initialization() {
         db=new DatabaseHelper(getApplicationContext());
         pd=new ProgressDialog(this);
-        appLocationService = new LocationService(FeedPageLocation.this);
-        Location gpsLocation = appLocationService.getLocation(LocationManager.NETWORK_PROVIDER);
-        if (gpsLocation != null) {
-          double latitude = gpsLocation.getLatitude();
-          double longitude = gpsLocation.getLongitude();
-                fetchNearbyLocation(latitude,longitude);
-        } else {
-            showSettingsAlert("NETWORK");
+        fetchLocation();
+    }
+
+    private void fetchLocation() {
+        // create class object
+        gps = new GPSTracker(FeedPageLocation.this);
+        // check if GPS enabled
+        if(gps.canGetLocation()){
+            double latitude = gps.getLatitude();
+            double longitude = gps.getLongitude();
+            mainLocation=gps.getLocation();
+            fetchNearbyLocation(latitude, longitude);
+        }else{
+            gps.showSettingsAlert();
         }
     }
+
 
     private void fetchNearbyLocation(double latitude, double longitude) {
         new fetchNearbyLocationAsynTask().execute(latitude+"",longitude+"");
@@ -110,45 +125,6 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
         }
     }
 
-    public void showSettingsAlert(String provider) {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(
-                FeedPageLocation.this);
-
-        alertDialog.setTitle(provider + " SETTINGS");
-
-        alertDialog
-                .setMessage(provider + " is not enabled! Want to go to settings menu?");
-
-        alertDialog.setPositiveButton("Settings",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(
-                                Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                        FeedPageLocation.this.startActivity(intent);
-                        isGPSEnablesManually=true;
-                    }
-                });
-
-        alertDialog.setNegativeButton("Cancel",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-
-        alertDialog.show();
-    }
-
-  /*  @Override
-    protected void onResume() {
-        super.onResume();
-        if(isGPSEnablesManually)
-        {
-            isGPSEnablesManually=false;
-            finish();
-        }
-    }*/
-
     private class fetchNearbyLocationAsynTask extends AsyncTask<String, Void, JSONObject> {
 
         @Override
@@ -163,8 +139,7 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
 
         @Override
         protected void onPostExecute(JSONObject json) {
-            if(pd.isShowing() && pd!=null)
-                pd.dismiss();
+            Utils.closeProgress();
             try {
             if(!json.getString("status").equalsIgnoreCase("ZERO_RESULTS"))
             {
@@ -173,9 +148,15 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
                 {
                     JSONObject data=resultArray.getJSONObject(i);
                     String geometry=data.getJSONObject("geometry").getJSONObject("location").getString("lat")+","+data.getJSONObject("geometry").getJSONObject("location").getString("lng");
-                    LocationModel item=new LocationModel(data.getString("name"),data.getString("vicinity"),geometry);
+                    Location fetchedLocation=new Location(data.getString("vicinity"));
+                    fetchedLocation.setLatitude(Float.parseFloat(data.getJSONObject("geometry").getJSONObject("location").getString("lat")));
+                    fetchedLocation.setLongitude(Float.parseFloat(data.getJSONObject("geometry").getJSONObject("location").getString("lng")));
+                    Float distance= fetchedLocation.distanceTo(mainLocation);
+                    LocationModel item=new LocationModel(data.getString("name"),data.getString("vicinity"),geometry,distance);
                     result.add(item);
+
                 }
+                Collections.sort(result, new CustomComparator());
                 adapter=new LocationAdapter(FeedPageLocation.this,result);
                 lv_locations.setAdapter(adapter);
             }
@@ -184,15 +165,22 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
             }
         }
 
+        public class CustomComparator implements Comparator<LocationModel> {
+            @Override
+            public int compare(LocationModel o1, LocationModel o2) {
+                return o1.getDistance().compareTo(o2.getDistance());
+            }
+        }
+
         @Override
         protected void onPreExecute() {
             result=new ArrayList<LocationModel>();
-            pd.setMessage("Loading");
-            pd.show();
+            Utils.showProgress(FeedPageLocation.this,getResources().getString(R.string.pleasewait));
         }
 
         @Override
         protected void onProgressUpdate(Void... values) {
         }
     }
+
 }

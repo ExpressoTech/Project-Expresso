@@ -10,35 +10,27 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.expresso.database.DatabaseHelper;
 import com.expresso.model.Feed;
 import com.expresso.model.FeedAttachment;
 import com.expresso.utils.Constant;
-import com.expresso.utils.JSONParser;
 import com.expresso.utils.Utils;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.List;
 
-import Managers.LoginManager;
+import com.expresso.Managers.LoginManager;
 
 /**
  * Created by Anirdesh_And0001 on 31-05-2015.

@@ -1,62 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.expresso.activity" >
+    package="com.expresso.activity">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.camera"></uses-feature>
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!--for fetching location-->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="app.desidime.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!-- Permissions for GCM Integration -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission
+        android:name="com.expresso.activity.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.expresso.activity.permission.C2D_MESSAGE" />
+
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:theme="@style/AppTheme" >
-        
+        android:theme="@style/AppTheme">
+
         <activity
             android:name=".LandingScreen"
-            android:label="@string/app_name" >
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
-        <activity android:name=".SignIn"
+        <activity
+            android:name=".SignIn"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".SignUp"
+        <activity
+            android:name=".SignUp"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".FeedPageLocation"
+        <activity
+            android:name=".FeedPageLocation"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".FeedCreationPage"
+        <activity
+            android:name=".FeedCreationPage"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
 
-        <activity android:name=".EndStory"
+        <activity
+            android:name=".EndStory"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
 
-        <activity android:name=".StoryBoard"
+        <activity
+            android:name=".StoryBoard"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
 
 
-        <activity android:name=".BirdView"
+        <activity
+            android:name=".BirdView"
             android:exported="true"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"></activity>
 
 
-        <activity android:name=".FullScreenViewActivity"
+        <activity
+            android:name=".FullScreenViewActivity"
             android:exported="true"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
-            ></activity>
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"></activity>
+
+        <activity
+            android:name=".ReplyActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.expresso.activity" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.expresso.gcm.GcmIntentService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
 
     </application>
 

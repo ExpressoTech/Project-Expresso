@@ -15,13 +15,12 @@ import com.expresso.utils.JSONParser;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Managers.LoginManager;
+import com.expresso.Managers.LoginManager;
 
 /**
  * Created by Akshay M on 4/5/2015.
