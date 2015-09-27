@@ -56,6 +56,7 @@ public class SignIn extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+        if(!et_login_email.getText().toString().isEmpty() && !et_login_passwd.getText().toString().isEmpty())
             new SignInTask().execute();
     }
 

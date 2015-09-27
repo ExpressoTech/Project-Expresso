@@ -9,10 +9,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.expresso.Managers.LoginManager;
 import com.expresso.adapter.TabsPagerAdapter;
 import com.expresso.drawer.NavigationDrawerCallbacks;
 import com.expresso.drawer.NavigationDrawerFragment;
@@ -32,7 +34,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         getWidgetReferences();
         bindWidgetEvents();
         initialization();
-
+        Log.e("RegID", new LoginManager(this).getDeviceToken());
         tabsStrip.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             // This method will be invoked when a new page becomes selected.

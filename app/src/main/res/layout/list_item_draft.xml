@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_large">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_large"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_medium"
+        android:id="@+id/tv_date"
+        android:text="5th July"
+        android:layout_gravity="center_vertical"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_large"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:id="@+id/tv_location"
+        android:text="Daffodils 20Daffodils 20Daffodils 20"
+        android:background="@drawable/feed_location"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tv_date"
+        android:layout_toEndOf="@+id/tv_date" />
+
+
+</RelativeLayout>

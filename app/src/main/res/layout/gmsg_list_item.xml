@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/round_rect">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_alignTop="@+id/avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Ramesh"/>
+
+        <TextView
+            android:id="@+id/fillerText"
+            android:layout_toRightOf="@id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff555555"
+            android:text=" left a geomessage at"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_below="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/avatar"
+            android:textColor="#ff939393"
+            android:layout_marginBottom="5dp"
+            android:text="Location"/>
+
+        <ImageView
+            android:id="@+id/icon_media"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/avatar"
+            android:scaleType="fitCenter"
+            android:layout_below="@id/location"
+            android:src="@drawable/ic_collections_white_48dp"
+            android:background="#ff939393"/>
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/icon_media"
+            android:layout_alignTop="@+id/icon_media"
+            android:text="MultiMedia"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/preview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/avatar"/>
+    </RelativeLayout>
+
+</RelativeLayout>

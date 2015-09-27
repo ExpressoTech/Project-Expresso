@@ -121,7 +121,7 @@ public class ReplyActivity extends ActionBarActivity implements View.OnClickList
             try {
                 if(json.getString("status").equalsIgnoreCase("Success"))
                 {
-                    setUpFetchedCommentReplies(json);
+                   setUpFetchedCommentReplies(json);
                 }
                 else {
                     Toast.makeText(ReplyActivity.this, json.getString("message"), Toast.LENGTH_LONG).show();
@@ -196,6 +196,7 @@ public class ReplyActivity extends ActionBarActivity implements View.OnClickList
         @Override
         protected void onPostExecute(JSONObject json) {
             Utils.closeProgress();
+            et_reply.setText("");
             try {
                 if(json.getString("status").equalsIgnoreCase("Success"))
                 {

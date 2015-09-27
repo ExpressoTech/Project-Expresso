@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.expresso.Managers.FeedManager;
+import com.expresso.Managers.LoginManager;
 import com.expresso.adapter.LocationAdapter;
 import com.expresso.database.DatabaseHelper;
 import com.expresso.model.LocationModel;
@@ -51,6 +53,8 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
     private DatabaseHelper db;
     private static final int ENABLE_GPS = 100;
     private Location mainLocation;
+    private FeedManager fManager;
+    private LoginManager mManager;
     // GPSTracker class
     GPSTracker gps;
 
@@ -82,6 +86,7 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
     }
 
     private void initialization() {
+        mManager=new LoginManager(getApplicationContext());
         db=new DatabaseHelper(getApplicationContext());
         pd=new ProgressDialog(this);
         fetchLocation();
@@ -116,7 +121,8 @@ public class FeedPageLocation extends Activity implements View.OnClickListener {
                     {
                         Constant.saveLocation(getApplicationContext(),et_feedLocation.getText().toString());
                         LocationModel item=adapter.getItem(selectedPosition);
-                        long feedID=db.createFeed(item);
+                        fManager=new FeedManager(this);
+                        long feedID=fManager.createFeed(item,mManager);
                         Constant.setFeedID(getApplicationContext(),feedID);
                         Intent i=new Intent(this,FeedCreationPage.class);
                         startActivity(i);

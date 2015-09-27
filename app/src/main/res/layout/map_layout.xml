@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <!--<View-->
+    <!-- -->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:src="@drawable/ic_launcher" />-->
+
+    <!--<com.google.android.gms.maps.MapView-->
+
+        <!--android:id="@+id/mapView"-->
+
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--/>-->
+
+    <com.google.android.gms.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.expresso.activity.GeoMsgInbox">
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ff37283a"/>
+
+    <!--FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginBottom="@dimen/fab_margin_bottom"
+            android:layout_marginRight="@dimen/fab_margin_right"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            android:onClick="createGmsg"/>
+    </FrameLayout-->
+
+</RelativeLayout>
+<!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/layout/geo_msg_inbox.xml -->

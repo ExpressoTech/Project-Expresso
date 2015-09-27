@@ -23,6 +23,14 @@ public class Constant {
     public static final String FETCHFEED_COMMENT_URL = SERVERURL + "fetchFeedComment.php";
     public static final String POST_COMMENT_REPLY_URL = SERVERURL + "createReply.php";
     public static final String FETCHFEED_COMMENT_REPLY_URL = SERVERURL + "fetchCommentReply.php";
+    public static final String FOLLOWUSER = SERVERURL + "followUser.php";
+    public static final String USERPROFILE = SERVERURL+"userProfile.php";
+    public static final String FOLLOWERS = SERVERURL+"fetchFollowingUsers.php";
+    public static final String USERPROFILEDETAILS = SERVERURL+"userProfileUserDetails.php";
+    public static final String FETCHFOLLOWINGUSERS= SERVERURL+"fetchFollowingUsers.php";
+    public static final String LOCATION_DATE =SERVERURL+"userProfileFeedLocationDate.php";
+    public static final String USERPROFILEFEEDDATA = SERVERURL+"userProfileFeedData.php";
+    public static final String USERPROFILEDETAILFEEDDATA = SERVERURL+"userProfileDetailFeedData.php";
 
     public static final String IMAGEPATH = "imagepath";
     public static final String AVATAR = "avatar";
@@ -38,6 +46,12 @@ public class Constant {
     public static final String FLAG = "flag";
     public static final String REPLY = "reply";
     public static final String COMMENTID ="referenceId" ;
+    public static final String PUBLIC = "PUBLIC";
+    public static final String PRIVATE = "PRIVATE";
+    public static final String FRIEND = "FRIEND";
+    public static final int TYPE_IMAGE = 0;
+    public static final String USERAVATAR = "avatar";
+    public static final String STATUS_FLAG="flag";
 
     public static String USEREMAIL = "userEmail";
     public static String USERPASSWORD = "password";
@@ -45,6 +59,11 @@ public class Constant {
     public static String FEEDID = "feedID";
     public static String FEEDLOCATION = "feedLocation";
     public static String FEEDCOVERPIC = "feedCoverpic";
+
+    public static String PROFILEFLAG="status";
+    public static String FRIENDSID="friendId";
+    public static String UNFOLLOWFLAG="flag";
+
 
     public static void setFeedID(Context context, long feedID) {
         PreferenceManager.getDefaultSharedPreferences(context).edit().putInt(FEEDID, (int) feedID).commit();

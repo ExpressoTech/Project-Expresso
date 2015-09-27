@@ -66,4 +66,11 @@ public class LoginManager {
     public String getDeviceToken() {
         return PreferenceManager.getDefaultSharedPreferences(context).getString(DEVICETOKEN,"");
     }
+
+    public boolean isMyStory(int createdById) {
+        if(Integer.parseInt(getUserId())==createdById)
+            return true;
+        else
+            return false;
+    }
 }

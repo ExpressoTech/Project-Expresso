@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -75,7 +76,7 @@ public class StoryBoard extends ActionBarActivity implements BaseSliderView.OnSl
         bindWidgetEvents();
         initialization();
         setupStory();
-        setupStoryComment();
+        setupToolbar();
 
         commentsListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -90,19 +91,24 @@ public class StoryBoard extends ActionBarActivity implements BaseSliderView.OnSl
         });
     }
 
-    private void setupStoryComment() {
-        /*feedCommentList=getIntent().getParcelableArrayListExtra(Constant.FEEDCOMMENT);
-        commentAdapter=new CommentAdapter(this,feedCommentList);
-        commentsListview.setAdapter(commentAdapter);*/
+    private void setupToolbar() {
+        setSupportActionBar(toolbar);
+
     }
+
 
     private void setupStory() {
         HashMap<String,String> url_maps = new HashMap<String, String>();
         feedItem=db.getUserFeed(feedId);
         if(feedItem!=null)
         {
-            if(!feedItem.getUser_avatar().isEmpty())
-            Picasso.with(getApplicationContext()).load(feedItem.getUser_avatar()).placeholder(R.drawable.please_wait).into(iv_userImage);
+                Glide.with(this)
+                        .load(feedItem.getUser_avatar())
+                        .placeholder(R.drawable.default_user)
+                        .centerCrop()
+                        .crossFade()
+                        .into(iv_userImage);
+
             tv_username.setText(feedItem.getUser_name());
             tv_feedage.setText(Utils.dateDiff(Utils.getDate(feedItem.getFeed_age())));
             tv_location.setText(feedItem.getFeed_location());

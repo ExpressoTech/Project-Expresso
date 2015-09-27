@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.sothree.slidinguppanel\library\3.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c1200ab3b93b8f42c0878b00eb79a84c1f112cf7">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-160d4e1437bbb6fa33e48572c0ed7555f432eccb.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\libs\apache-mime4j-0.6.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="945007627e8d12275d755081a9e609c018e1210d">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\apache-mime4j-0.6-57193934d81b15752ed769dd96d82bf01978afa9.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.5\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="75c54c470e19b251749e6e6c2cf3d73c0b50aa64">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-1377bcd79fa7d87f7d03729c3047a4cd1052a982.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.2\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="803c4c913beac8f7980d680c725a40835d1d7c77">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-3015a19ebb33f5f249e3298709075a5ba3dc7629.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\libs\socialauth-android-3.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="50cb8f7d8602c2de0b42f01ccba940985192aaa7">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\socialauth-android-3.2-1c557b3ca76b13650bbc964e9255d0e90ca0a3dc.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-fc44c06fb18d524823dbe5b33cad16b36a5c94bf.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.daimajia.slider\library\1.1.5\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="08962e03b6a954c65d4944e092879b7f5ee1208d">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-2a3e4a8939e3441546009adf21f44c5a01e8e8c0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arun Lodhi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-47218452cb500d7c61ccb0357701f2988f87267e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arun Lodhi\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.1.4\129874135e6081269ace2312092031558865de12\bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\bolts-android-1.1.4-6f862c803d87f68b058fd45efbf26cc201d59b47.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-24441fd963672dfeba1220030066c524dcc0e372.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\libs\httpmime-4.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="326bf4147f100e8a4fdd7f1867a87e969fb10812">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\httpmime-4.0.1-507468f347487d7aba81f6f3af1ffd3a1e8eefc8.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-b29662d4422c121e84e40b75c932a888a0b6187b.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-680a4ffbe1e24611522a76ce46b7ccafb360ba07.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arun Lodhi\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\library-2.4.0-f25594e8205a1f49e101eb7e9346b7bfcf68d96d.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.googlecode.android-wheel\datetime-picker\1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9786ed9c13449f5fd95d0ba160b1b2d6134dbf4f">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-3d108e5b59353ed9829b092b6ebb0d715c99602b.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.rockerhieu.emojicon\library\1.3.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f6a871e9addb8f2c2b8f1d5414c60a574d37fddb">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-a92207d1cb0f125bd23b65086928943ffb4152f4.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-60a71936d8ea38ad733037b7164b38ac34cf0e6b.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\libs\socialauth-4.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a867292683d6086af72c7cac181892e118058989">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\socialauth-4.4-308966698fc34f3105211d76c7f07c16d8f80535.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.astuetz\pagerslidingtabstrip\1.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-30b3caf62abb4885d37a9d2686967f39447df9c6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arun Lodhi\.gradle\caches\modules-2\files-2.1\de.greenrobot\eventbus\3.0.0-beta1\d4a559b2dfb3e8a00ed37c440e118584f60db046\eventbus-3.0.0-beta1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d4a559b2dfb3e8a00ed37c440e118584f60db046">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0-beta1-482aacbb740ef2e0425a3e4e9b38bd58a732c2d9.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-06be686cc4f7a4828d18f4fcc1aab2362b314c1a.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-79bbd7840f359d9e76a098ab3e4b811897367c71.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arun Lodhi\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.7\cd78109020f9ec803ef4e652c17ee4615b03e20a\android-async-http-1.4.7.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cd78109020f9ec803ef4e652c17ee4615b03e20a">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.7-86835243400babeb96dacf5ac39fbf36d448cf25.jar" />
+    </item>
+    <item
+        jar="C:\Users\Arun Lodhi\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.17\f417d7f776d1ee5858fc04d9362aa45e9bedd26b\library-1.0.17.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f417d7f776d1ee5858fc04d9362aa45e9bedd26b">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\library-1.0.17-0d1a6c3b9112cfa011e419c683ea930f45fe2d64.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\it.sephiroth.android.library.horizontallistview\hlistview\1.2.2\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="698658e3af1e3f2a5b199e0d09ee6c57793405bd">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-4c0a69cb2d930f59b2590aa27d4ad3e87f6b23be.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.7.6.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1c83e45c56a824bc54f276b2fa071f1914cceba7">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-eeeddaca46684159df0788adac32f2ca1cdc45a1.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0f254ec13d6671680482d2218f01ecf14dfa93e6">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-60fe96a576aafdb43528aa54de003d6aad810907.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\libs\glide-3.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\glide-3.5.2-48299ba5d7e41223c78f93afcdeb85163f90e670.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.getbase\floatingactionbutton\1.9.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d4b681a6084ef53d2825520fc77fcaddde351f64">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-8d26e6cd100bcadc6c62a416bd20ffae8ccd826c.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\libs\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-d5ca5f02b4120243711589da6bf2221637e77ffa.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-dbacf25b2a4b9fd36193f0c6a3d0fef4b7ab0972.jar" />
+    </item>
+    <item
+        jar="C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a78183f30e769a98ab4820794f597763088d3065">
+        <dex dex="C:\GitHub\Project-Expresso-master\app\build\intermediates\pre-dexed\debug\classes-2239df5c0085db578279881165bec44bf10d2b87.jar" />
+    </item>
+
+</items>

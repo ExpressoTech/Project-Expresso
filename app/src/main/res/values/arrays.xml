@@ -9,4 +9,9 @@
     <string-array name="tagIconArray" >
 
     </string-array>
+    <string-array name="items" >
+        <item name="public">PUBLIC</item>
+        <item name="friends">FRIENDS</item>
+        <item name="private">PRIVATE</item>
+    </string-array>
 </resources>

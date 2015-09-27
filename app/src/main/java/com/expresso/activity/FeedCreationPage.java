@@ -63,6 +63,7 @@ public class FeedCreationPage extends ActionBarActivity implements View.OnClickL
     private TagAdapter tagAdapter;
     private String selectedtag="";
     private Toolbar toolbar;
+    private boolean isFromList=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +78,6 @@ public class FeedCreationPage extends ActionBarActivity implements View.OnClickL
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 try {
                     FeedAttachment item = result.get(position);
-                //    iv_preview.setImageDrawable(Drawable.createFromPath(item.getFeed_url()));
                     Glide.with(FeedCreationPage.this)
                             .load(item.getFeed_url())
                             .centerCrop()
@@ -88,6 +88,7 @@ public class FeedCreationPage extends ActionBarActivity implements View.OnClickL
                     iv_cancel.setVisibility(View.VISIBLE);
                     selectedPos = item.getFed_pos();
                     selectedItem = position;
+                    isFromList= true;
                 }catch (Exception e)
                 {
                     e.printStackTrace();
@@ -177,10 +178,12 @@ public class FeedCreationPage extends ActionBarActivity implements View.OnClickL
             iv_preview.setImageBitmap(null);
             hideOptions();
             if(result.size()>0 && result!=null) {
-                db.removeAttachment(selectedPos, Constant.getFeedID(getApplicationContext()));
-                Log.e("Tag", result.size() + "--" + selectedItem);
+            if(isFromList) {
+                db.removeAttachment(selectedItem, Constant.getFeedID(getApplicationContext()));
                 result.remove(selectedItem);
                 adapter.notifyDataSetChanged();
+                isFromList=false;
+            }
             }
         }
         if(v==iv_done)
@@ -192,7 +195,7 @@ public class FeedCreationPage extends ActionBarActivity implements View.OnClickL
             hideOptions();
             FeedAttachment item=new FeedAttachment();
             item.setFeed_tag(selectedtag);
-            item.setFeed_type(0);
+            item.setFeed_type(Constant.TYPE_IMAGE);
             item.setFeed_url(url);
             item.setFed_pos(getEmptyPosition());
             result.add(item);

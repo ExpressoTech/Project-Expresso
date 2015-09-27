@@ -4,6 +4,18 @@
     android:background="@android:color/black"
     android:layout_height="match_parent" >
 
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_large"
+        android:text="Click on Image to Tag Users"
+        android:textSize="@dimen/text_size_large"
+        android:visibility="gone"
+        />
+
     <ImageView
         android:id="@+id/imgDisplay"
         android:layout_width="fill_parent"
@@ -23,6 +35,19 @@
         android:paddingBottom="2dp"
         android:background="@drawable/button_background"
         android:textColor="#ffffff"
+        android:visibility="gone"
         android:text="Close" />
+
+    <TextView
+        android:id="@+id/tv_startTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_large"
+        android:text="Birthday Party at Hopipolla"
+        android:textSize="@dimen/text_size_large"
+        />
 
 </RelativeLayout>

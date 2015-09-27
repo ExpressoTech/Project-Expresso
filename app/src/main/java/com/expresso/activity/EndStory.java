@@ -10,7 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.expresso.Managers.FeedManager;
 import com.expresso.database.DatabaseHelper;
 import com.expresso.model.Feed;
 import com.expresso.model.FeedAttachment;
@@ -26,6 +29,7 @@ import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.w3c.dom.Text;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -40,9 +44,12 @@ public class EndStory extends ActionBarActivity implements View.OnClickListener{
     private EditText et_feedTitle;
     private Button btn_renderStory;
     private DatabaseHelper db;
-    ProgressDialog pd;
-    HttpEntity resEntity;
+    private TextView tv_privacy;
+
+    private ProgressDialog pd;
+    private HttpEntity resEntity;
     private LoginManager mManager;
+    private FeedManager fManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,15 +73,18 @@ public class EndStory extends ActionBarActivity implements View.OnClickListener{
         toolbar= (Toolbar) findViewById(R.id.toolbar_header);
         et_feedTitle= (EditText) findViewById(R.id.et_feedTitle);
         btn_renderStory= (Button) findViewById(R.id.btn_renderStory);
+        tv_privacy= (TextView) findViewById(R.id.tv_privacy);
     }
 
     private void bindWidgetEvents() {
         btn_renderStory.setOnClickListener(this);
+        tv_privacy.setOnClickListener(this);
     }
 
     private void initialization() {
         db=new DatabaseHelper(getApplicationContext());
         mManager=new LoginManager(getApplicationContext());
+        fManager=new FeedManager(getApplicationContext());
     }
 
     @Override
@@ -83,9 +93,25 @@ public class EndStory extends ActionBarActivity implements View.OnClickListener{
         {
             if(!et_feedTitle.getText().toString().isEmpty())
             {
-                db.updateFeedData(et_feedTitle.getText().toString(),Constant.getCoverPicUrl(getApplicationContext()),Constant.getFeedID(getApplicationContext()));
+                fManager.updateFeedData(et_feedTitle.getText().toString(),Constant.getCoverPicUrl(getApplicationContext()),Constant.getFeedID(getApplicationContext()));
                 new CreateFeedStory().execute();
             }
+        }
+        if(v==tv_privacy)
+        {
+            new MaterialDialog.Builder(this)
+                    .title(R.string.privacy_message)
+                    .items(R.array.items)
+                    .itemsCallbackSingleChoice(0, new MaterialDialog.ListCallbackSingleChoice() {
+                        @Override
+                        public boolean onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                            tv_privacy.setText(text.toString());
+                            return true;
+                        }
+                    })
+                    .positiveText(R.string.done)
+                    .negativeText(R.string.cancel)
+                    .show();
         }
     }
 
@@ -105,16 +131,15 @@ public class EndStory extends ActionBarActivity implements View.OnClickListener{
                 result=db.getUserCreationFeedAttachemnt(Constant.getFeedID(getApplicationContext()));
 
                 try {
-
                     reqEntity.addPart("feedTitle", new StringBody(item.getFeed_title()));
                     reqEntity.addPart("feedLocationName", new StringBody(item.getFeed_location()));
                     reqEntity.addPart("feedLocationGeometry", new StringBody(item.getFeed_geometry()));
                     reqEntity.addPart("feedCreatedBy",new StringBody(mManager.getUserId().toString()));
                     reqEntity.addPart("feedAttachmentCount", new StringBody(result.size() + ""));
+                    reqEntity.addPart("feedPrivacy", new StringBody(tv_privacy.getText().toString()));
                     File coverfile = new File(item.getFeed_image());
                     FileBody coverbin = new FileBody(coverfile);
                     reqEntity.addPart("feedcoverPic", coverbin);
-
                 }
                 catch (Exception e) {
                     e.printStackTrace();
@@ -154,7 +179,8 @@ public class EndStory extends ActionBarActivity implements View.OnClickListener{
             if(pd.isShowing() && pd!=null)
                 pd.dismiss();
             try {
-                Utils.showToast(EndStory.this,result);
+                        fManager.updateFeedDraftStatus(Constant.getFeedID(getApplicationContext()),1);
+                        Utils.showToast(EndStory.this,result);
                         Intent i=new Intent(EndStory.this,MainActivity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

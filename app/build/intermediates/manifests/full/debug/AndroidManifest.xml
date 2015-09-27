@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.expresso.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- for fetching location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="app.desidime.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!-- Permissions for GCM Integration -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.expresso.activity.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.expresso.activity.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- android:name="com.expresso.Expresso" -->
+    <application
+        android:name="com.expresso.adapter.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- Google Maps Fragment API Key Data -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAGt7RRtGKG7zZoDIH1RKxKnFaMOHRl8ss" />
+        <!-- GeoMessage -->
+        <activity
+            android:name="com.expresso.activity.GeoMsgCreate"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service
+            android:name="com.expresso.service.FetchAddressIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.expresso.activity.GeoMsgInbox"
+            android:label="@string/title_activity_geo_msg_inbox"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.expresso.activity.GeoMsgMap"
+            android:label="@string/title_activity_geo_msg_map" >
+        </activity>
+        <!-- Expresso -->
+        <activity
+            android:name="com.expresso.activity.LandingScreen"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+
+            <!--
+            intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter
+            -->
+        </activity>
+        <activity
+            android:name="com.expresso.activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.expresso.activity.SignIn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.expresso.activity.SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.expresso.activity.FeedPageLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.expresso.activity.FeedCreationPage"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.expresso.activity.EndStory"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.expresso.activity.StoryBoard"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.expresso.activity.BirdView"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.expresso.activity.FullScreenViewActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.expresso.activity.ReplyActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.expresso.activity.UserProfileActivities.UserProfileActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.expresso.activity.UserProfileActivities.Followers"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <!--
+            activity
+            android:name=".UserProfileActivities.FollowingUsers"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity
+        -->
+        <activity
+            android:name="com.expresso.activity.UserProfileActivities.ImageFullScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.expresso.activity.UserProfileActivities.ListViewPeoples"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="com.expresso.activity.ViewFeedDrafts"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.expresso.activity" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.expresso.gcm.GcmIntentService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

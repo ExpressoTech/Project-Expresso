@@ -76,7 +76,7 @@ public class LandingScreen extends Activity implements View.OnClickListener{
         btn_signin.setOnClickListener(this);
         btn_signup.setOnClickListener(this);
         facebookLinearButton.setOnClickListener(this);
-        googlePlusLinearButton.setOnClickListener(this);
+    //    googlePlusLinearButton.setOnClickListener(this);
     }
 
     private void initialization() {

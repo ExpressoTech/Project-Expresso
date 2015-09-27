@@ -1,0 +1,169 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoPanelHeight="320dp"
+    sothree:umanoShadowHeight="4dp"
+    android:orientation="vertical"
+    android:background="#fa6a6a"
+    android:baselineAligned="false">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/slider">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:padding="10dp">
+
+        <ImageButton android:id="@+id/ib"
+            android:src="@drawable/popup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@null"
+            />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_pic1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:src="@drawable/default_user"
+            app:border_width="4dp"
+            app:border_color="@color/Gray"
+            android:layout_weight="0.31"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/Txt02"
+            android:layout_alignStart="@+id/Txt02" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Txt01"
+            android:textColor="@color/GrayLight"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_weight="0.2"
+            android:textSize="20dp"
+            android:layout_below="@+id/profile_pic1"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:text="Borivali, Mumbai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Txt02"
+            android:textColor="@color/GrayLight"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_weight="0.2"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/Txt01" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/StoryCount"
+            android:textColor="@color/GrayLight"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+        <TextView
+            android:text="100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/FollowingCount"
+            android:textColor="@color/GrayLight"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+        <TextView
+            android:text="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/FollowerCount"
+            android:textColor="@color/GrayLight"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Stories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Story"
+            android:textColor="@color/GrayLight"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+        <TextView
+            android:text="Following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Following"
+            android:textColor="@color/GrayLight"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+        <TextView
+            android:text="Follower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Follower"
+            android:textColor="@color/GrayLight"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_large">
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="14sp"
+            android:textColor="#80FFFFFF"
+            app:pstsDividerColor="@color/green"
+            app:pstsIndicatorColor="@color/red"
+            app:pstsUnderlineColor="@color/blue"
+            app:pstsIndicatorHeight="0dp"
+            android:background="@color/GrayLight">
+        </com.astuetz.PagerSlidingTabStrip>
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@+id/profile_pic1"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout><!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/layout/user_profile.xml -->

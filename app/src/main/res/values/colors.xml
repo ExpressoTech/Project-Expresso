@@ -3,8 +3,21 @@
     <color name="gplus_red">#ffd22525</color>
     <color name="fb_blue">#ff30418e</color>
     <color name="txt_color">#ffffffff</color>
-    <color name="white">#ffffffff</color>
+    <!--color name="white">#ffffffff</color-->
     <color name="empty">#00ffffff</color>
     <color name="light_gray">#ff8c8c8c</color>
     <color name="red">#ff0000</color>
+    <color name="black">#000000</color>
+    <color name="GrayLight">#e5e5e5</color>
+    <color name="grey">#e5e5e5</color>
+    
+    <color name="ColorPrimary">#00897B</color>
+    <color name="ColorPrimaryDark">#00695C</color>
+    <color name="tabsScrollColor">#004D40</color>
+    <color name="VeryDarkPrimary">#ff00251a</color>
+    <color name="color1">#ffff524a</color>
+    <color name="green">#ff199737</color>
+    <color name="dark_blue">#741740a3</color>
+    <color name="white">#ffffffff</color>
+    
 </resources>

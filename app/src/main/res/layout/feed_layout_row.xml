@@ -6,48 +6,6 @@
     android:descendantFocusability="blocksDescendants"
     android:orientation="vertical">
 
-    <!--<RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_userImage"
-            app:border_color="#FF000000"
-            app:border_width="1dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_medium"
-            android:padding="@dimen/padding_medium"
-            android:src="@drawable/ic_launcher" />
-
-        <TextView
-            android:id="@+id/tv_feedage"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:drawableLeft="@drawable/clock"
-            android:drawablePadding="10dp"
-            android:gravity="center"
-            android:padding="@dimen/padding_medium"
-            android:text="3 min ago"
-            android:textColor="@android:color/darker_gray" />
-
-        <TextView
-            android:id="@+id/tv_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/iv_userImage"
-            android:text="Project Expresso"
-            android:padding="@dimen/padding_medium"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </RelativeLayout>-->
 
     <include
         layout="@layout/user_feed_header"
@@ -73,15 +31,26 @@
             android:layout_alignParentRight="true"
             android:scaleType="centerCrop" />
 
-        <TextView
-            android:id="@+id/tv_feedtitle"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:gravity="center_vertical"
-            android:padding="@dimen/padding_medium"
-            android:textColor="@android:color/white"
-            android:text="Akshay Mehta's birthday" />
+            <TextView
+                android:id="@+id/tv_feedtitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_medium"
+                android:textStyle="bold"
+                android:background="#40000000"
+                android:textColor="@android:color/white"
+                android:text="Akshay Mehta's birthday" />
+
+        <ProgressBar
+            android:id="@+id/pb_loader"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminate="true"
+            android:max="100"
+            android:indeterminateDrawable="@drawable/custom_progressbar"
+            android:layout_centerInParent="true"/>
     </RelativeLayout>
 
     <RelativeLayout

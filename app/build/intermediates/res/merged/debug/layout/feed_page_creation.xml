@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_header"
+        layout="@layout/toolbar_layout"
+        android:layout_alignParentTop="true"></include>
+
+<LinearLayout
+    android:id="@+id/top_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="90dp"
+    android:layout_below="@+id/toolbar_header"
+    android:background="@color/ripple_material_light"
+    android:orientation="horizontal">
+
+    <it.sephiroth.android.library.widget.HListView
+        android:id="@+id/hListView1"
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
+    </LinearLayout>
+
+
+<RelativeLayout
+    android:id="@+id/body_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/top_layout"
+    android:layout_above="@+id/bottom_main_layout">
+
+    <ImageView
+        android:id="@+id/iv_preview"
+        android:scaleType="centerCrop"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cancel"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+    />
+    <ImageView
+        android:id="@+id/iv_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/done"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:id="@+id/bottom_main_layout"
+    android:layout_alignParentBottom="true">
+
+<LinearLayout
+    android:id="@+id/bottom_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ripple_material_light"
+    android:layout_alignParentBottom="true"
+    android:visibility="visible"
+    android:weightSum="3"
+    android:orientation="horizontal">
+
+<ImageView
+    android:id="@+id/iv_gallery"
+    android:layout_width="0dp"
+    android:layout_height="60dp"
+    android:layout_weight="1"
+    android:layout_gravity="center_vertical|center_horizontal|center"
+    android:src="@drawable/gallery"/>
+
+<ImageView
+    android:id="@+id/iv_camera"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal|center"
+    android:src="@drawable/camer"/>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/bottom_layout2"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:background="@color/ripple_material_light"
+    android:layout_alignParentBottom="true"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:text="@string/selectTag"
+        android:textSize="15sp"
+        android:padding="@dimen/padding_large">
+
+        </TextView>
+    <it.sephiroth.android.library.widget.HListView
+        android:id="@+id/lv_tags"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin_medium"
+        app:hlv_dividerWidth="10dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+</RelativeLayout>
+</RelativeLayout><!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/layout/feed_page_creation.xml -->

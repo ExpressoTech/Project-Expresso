@@ -8,6 +8,7 @@ import android.util.Log;
 
 import com.expresso.adapter.FullScreenImageAdapter;
 import com.expresso.utils.Constant;
+import com.expresso.utils.ZoomOutPageTransformer;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class FullScreenViewActivity extends Activity{
     private FullScreenImageAdapter adapter;
 	private ViewPager viewPager;
     ArrayList<String> imagePaths=new ArrayList<String>();
+    private int feedID;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,12 +26,11 @@ public class FullScreenViewActivity extends Activity{
 
 		Intent i = getIntent();
 		int position = i.getIntExtra("position", 0);
+        feedID = i.getIntExtra("feedId", 0);
         imagePaths=i.getStringArrayListExtra(Constant.IMAGEPATH);
         Log.e("Images",imagePaths.toString());
-        adapter = new FullScreenImageAdapter(FullScreenViewActivity.this,imagePaths);
+        adapter = new FullScreenImageAdapter(FullScreenViewActivity.this,imagePaths,feedID);
 		viewPager.setAdapter(adapter);
-
-		// displaying selected image first
-		viewPager.setCurrentItem(position);
+        viewPager.setPageTransformer(true,new ZoomOutPageTransformer());
 	}
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_large"
+        android:text="Click on Image to Tag Users"
+        android:textSize="@dimen/text_size_large"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/imgDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:background="@drawable/button_background"
+        android:textColor="#ffffff"
+        android:visibility="gone"
+        android:text="Close" />
+
+    <TextView
+        android:id="@+id/tv_startTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:padding="@dimen/padding_large"
+        android:text="Birthday Party at Hopipolla"
+        android:textSize="@dimen/text_size_large"
+        />
+
+</RelativeLayout><!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/layout/layout_fullscreen_image.xml -->

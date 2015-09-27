@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_maps"
+        android:icon="@drawable/ic_map_white_48dp"
+        android:title="Maps"
+        app:showAsAction="ifRoom" />
+</menu>
+<!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/menu/menu_geo_msg_inbox.xml -->

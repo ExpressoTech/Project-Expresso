@@ -1,0 +1,419 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:2:1-165:12
+	xmlns:tools
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:2:11-69
+	package
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:4:5-36
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:6:5-67
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:21:5-66
+MERGED from [com.daimajia.slider:library:1.1.5] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.daimajia.slider\library\1.1.5\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:6:22-64
+uses-feature#android.hardware.camera
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:7:5-73
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:7:19-57
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:9:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:10:5-81
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:22:5-80
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:22:5-80
+MERGED from [com.daimajia.slider:library:1.1.5] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.daimajia.slider\library\1.1.5\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:10:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:12:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:13:5-81
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:23:5-80
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:23:5-80
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:13:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:14:5-79
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:14:22-76
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:16:5-71
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:16:22-68
+uses-permission#app.desidime.permission.C2D_MESSAGE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:17:5-75
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:17:22-72
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:18:5-82
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:18:22-79
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:19:5-74
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:19:22-71
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:22:22-65
+permission#com.expresso.activity.permission.C2D_MESSAGE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:23:5-25:47
+	android:protectionLevel
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:25:9-44
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:24:9-68
+uses-permission#com.expresso.activity.permission.C2D_MESSAGE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:26:5-84
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:26:22-81
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:27:5-98
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:27:22-95
+uses-feature#0x00020000
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:29:5-31:35
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:24:5-26:33
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:24:5-26:33
+	android:required
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:31:9-32
+	android:glEsVersion
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:30:9-41
+application
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:34:5-163:19
+MERGED from [com.android.support:appcompat-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-gcm:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.astuetz:pagerslidingtabstrip:1.0.1] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.astuetz\pagerslidingtabstrip\1.0.1\AndroidManifest.xml:4:5-19
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [de.hdodenhof:circleimageview:1.2.2] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.2\AndroidManifest.xml:9:5-20
+MERGED from [it.sephiroth.android.library.horizontallistview:hlistview:1.2.2] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\it.sephiroth.android.library.horizontallistview\hlistview\1.2.2\AndroidManifest.xml:4:2-16
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.android:facebook-android-sdk:4.0.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.0.0\AndroidManifest.xml:28:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.afollestad:material-dialogs:0.7.6.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.7.6.0\AndroidManifest.xml:12:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.getbase:floatingactionbutton:1.9.1] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.getbase\floatingactionbutton\1.9.1\AndroidManifest.xml:12:5-20
+MERGED from [com.sothree.slidinguppanel:library:3.0.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.sothree.slidinguppanel\library\3.0.0\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.googlecode.android-wheel:datetime-picker:1.1] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.googlecode.android-wheel\datetime-picker\1.1\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.rockerhieu.emojicon:library:1.3.1] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.rockerhieu.emojicon\library\1.3.1\AndroidManifest.xml:9:5-53
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.pnikosis:materialish-progress:1.5] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.5\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:appcompat-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:37:9-41
+	android:allowBackup
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:36:9-35
+	android:icon
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:38:9-43
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:40:9-40
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:35:9-58
+	android:logo
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:39:9-43
+uses-library#com.google.android.maps
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:42:9-64
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:42:23-61
+meta-data#com.google.android.gms.version
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:43:9-46:45
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:21:9-23:69
+	tools:replace
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:46:13-42
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:44:13-58
+	android:value
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:45:13-66
+		REJECTED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:23:13-66
+		REJECTED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:23:13-66
+		REJECTED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:23:13-66
+		REJECTED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:23:13-66
+meta-data#com.google.android.maps.v2.API_KEY
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:48:9-50:71
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:49:13-62
+	android:value
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:50:13-68
+activity#com.expresso.activity.GeoMsgCreate
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:52:9-55:20
+	android:label
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:54:13-45
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:53:13-62
+service#com.expresso.service.FetchAddressIntentService
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:56:9-58:40
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:58:13-37
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:57:13-74
+activity#com.expresso.activity.GeoMsgInbox
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:59:9-67:20
+	android:label
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:61:13-65
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:62:13-71
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:60:13-61
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:63:13-66:29
+action#android.intent.action.MAIN
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:64:17-69
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:64:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:65:17-77
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:65:27-74
+activity#com.expresso.activity.GeoMsgMap
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:68:9-71:20
+	android:label
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:70:13-63
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:69:13-59
+activity#com.expresso.activity.LandingScreen
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:73:9-81:20
+	android:label
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:76:13-45
+	android:configChanges
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:75:13-63
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:74:13-42
+activity#com.expresso.activity.MainActivity
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:82:9-85:75
+	android:label
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:84:13-45
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:85:13-63
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:83:13-41
+activity#com.expresso.activity.SignIn
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:86:9-88:61
+	android:screenOrientation
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:88:13-49
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:87:13-35
+activity#com.expresso.activity.SignUp
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:89:9-91:61
+	android:screenOrientation
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:91:13-49
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:90:13-35
+activity#com.expresso.activity.FeedPageLocation
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:92:9-94:61
+	android:screenOrientation
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:94:13-49
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:93:13-45
+activity#com.expresso.activity.FeedCreationPage
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:95:9-99:75
+	android:screenOrientation
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:98:13-49
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:99:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:97:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:96:13-45
+activity#com.expresso.activity.EndStory
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:100:9-104:75
+	android:screenOrientation
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:103:13-49
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:104:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:102:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:101:13-37
+activity#com.expresso.activity.StoryBoard
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:105:9-109:75
+	android:screenOrientation
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:108:13-49
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:109:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:107:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:106:13-39
+activity#com.expresso.activity.BirdView
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:110:9-114:95
+	android:screenOrientation
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:113:13-49
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:114:13-83
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:112:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:111:13-37
+activity#com.expresso.activity.FullScreenViewActivity
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:115:9-118:95
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:118:13-83
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:117:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:116:13-51
+activity#com.expresso.activity.ReplyActivity
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:119:9-122:75
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:122:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:121:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:120:13-42
+activity#com.expresso.activity.UserProfileActivities.UserProfileActivity
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:123:9-126:75
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:126:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:125:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:124:13-70
+activity#com.expresso.activity.UserProfileActivities.Followers
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:127:9-130:75
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:130:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:129:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:128:13-60
+activity#com.expresso.activity.UserProfileActivities.ImageFullScreen
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:135:9-138:75
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:138:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:137:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:136:13-66
+activity#com.expresso.activity.UserProfileActivities.ListViewPeoples
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:139:9-142:75
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:142:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:141:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:140:13-66
+activity#com.expresso.activity.ViewFeedDrafts
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:143:9-146:75
+	android:theme
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:146:13-63
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:145:13-36
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:144:13-43
+receiver#com.google.android.gms.gcm.GcmReceiver
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:147:9-155:20
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:149:13-36
+	android:permission
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:150:13-73
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:148:13-66
+intent-filter#com.expresso.activity+com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:151:13-154:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:152:17-81
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:152:25-78
+category#com.expresso.activity
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:153:17-66
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:153:27-63
+service#com.expresso.gcm.GcmIntentService
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:156:9-162:19
+	android:exported
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:158:13-37
+	android:name
+		ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:157:13-61
+intent-filter#com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml:159:13-161:29
+uses-sdk
+INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-location:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:28:5-42
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-maps:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\AndroidManifest.xml:28:5-42
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-gcm:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:7.5.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.astuetz:pagerslidingtabstrip:1.0.1] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.astuetz\pagerslidingtabstrip\1.0.1\AndroidManifest.xml:2:5-72
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [de.hdodenhof:circleimageview:1.2.2] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.2.2\AndroidManifest.xml:5:5-7:41
+MERGED from [it.sephiroth.android.library.horizontallistview:hlistview:1.2.2] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\it.sephiroth.android.library.horizontallistview\hlistview\1.2.2\AndroidManifest.xml:2:5-72
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.daimajia.slider:library:1.1.5] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.daimajia.slider\library\1.1.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.0.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.0.0\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.afollestad:material-dialogs:0.7.6.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.7.6.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.getbase:floatingactionbutton:1.9.1] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.getbase\floatingactionbutton\1.9.1\AndroidManifest.xml:8:5-10:41
+MERGED from [com.sothree.slidinguppanel:library:3.0.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.sothree.slidinguppanel\library\3.0.0\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.googlecode.android-wheel:datetime-picker:1.1] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.googlecode.android-wheel\datetime-picker\1.1\AndroidManifest.xml:5:5-7:40
+MERGED from [com.android.support:design:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.rockerhieu.emojicon:library:1.3.1] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.rockerhieu.emojicon\library\1.3.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.pnikosis:materialish-progress:1.5] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] C:\GitHub\Project-Expresso-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+	android:targetSdkVersion
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml
+		INJECTED from C:\GitHub\Project-Expresso-master\app\src\main\AndroidManifest.xml

@@ -23,6 +23,8 @@ import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.afollestad.materialdialogs.Theme;
 import com.expresso.Managers.LoginManager;
 import com.expresso.activity.FeedPageLocation;
 import com.expresso.activity.R;
@@ -47,8 +49,7 @@ import java.util.Locale;
 public class Utils {
 
 
-    private static ProgressDialog progressdialog;
-    ProgressDialog progressDialog;
+    private static MaterialDialog progressdialog;
 
     public static void showToast(Activity activity, String toast) {
         Toast toastMsg=Toast.makeText(activity,toast,Toast.LENGTH_LONG);
@@ -58,7 +59,7 @@ public class Utils {
 
     public static String currentDate() {
         Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd:MM:yyyy HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd:MM:yyyy");
         String strDate = sdf.format(c.getTime());
         return strDate;
     }
@@ -338,11 +339,18 @@ public class Utils {
 
     public static void showProgress(Context context,String message)
     {
-        progressdialog=new ProgressDialog(context);
+     /*   progressdialog=new ProgressDialog(context);
         progressdialog.setTitle(R.string.app_name);
         progressdialog.setMessage(message);
         progressdialog.setCancelable(false);
-        progressdialog.show();
+        progressdialog.show();*/
+
+        progressdialog = new MaterialDialog.Builder(context)
+                .title(R.string.app_name)
+                .theme(Theme.LIGHT)
+                .progress(true, 0)
+                .cancelable(false)
+                .content(message).show();
 
     }
 

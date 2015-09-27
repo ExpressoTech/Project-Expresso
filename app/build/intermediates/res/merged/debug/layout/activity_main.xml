@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_header"
+        layout="@layout/toolbar_layout"></include>
+
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:layout_below="@+id/toolbar_header"
+        android:id="@+id/tabs"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:pstsIndicatorColor="#ffff3188"
+        android:background="#ffffff"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsDividerColor="#ffffff"
+        app:pstsTabPaddingLeftRight="8dp"
+        app:pstsUnderlineHeight="0dp">
+
+    </com.astuetz.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_below="@+id/tabs"/>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+        <!-- android:layout_marginTop="?android:attr/actionBarSize"-->
+        <fragment
+            android:id="@+id/fragment_drawer"
+            android:name="com.expresso.drawer.NavigationDrawerFragment"
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/actionBarheight"
+            app:layout="@layout/fragment_navigation_drawer"/>
+    </android.support.v4.widget.DrawerLayout>
+<!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/layout/activity_main.xml -->

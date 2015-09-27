@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:background="@color/accent_material_dark"
+    android:clickable="true">
+    <RelativeLayout
+        android:id="@+id/tv1"
+        android:layout_width="50dp"
+        android:layout_height="65dp"
+        android:background="@drawable/triangle"
+        android:rotation="180"
+        android:layout_alignTop="@+id/rv1"
+        android:layout_toLeftOf="@+id/rv1"
+        android:layout_toStartOf="@+id/rv1" />
+    <RelativeLayout
+        android:id="@+id/rv1"
+        android:layout_width="275dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rectangle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="bottom"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Visited Landmark"
+            android:id="@+id/placenametextView"
+            android:paddingLeft="55dp"
+            android:paddingTop="15dp"
+            android:textColor="@color/black"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:paddingLeft="55dp"
+    android:id="@+id/linearLayout1"
+    android:weightSum="1"
+    android:layout_below="@+id/linearLayout2">
+        <View
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/grey"
+             />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:includeFontPadding="false"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        android:text="With"
+        android:paddingRight="5dp"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageview2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/image"
+
+            app:border_color="@color/GrayLight"
+            app:border_width="0dp"
+
+            />
+        <TextView
+            android:id="@+id/with_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:textColor="@color/grey"
+            android:text="+4"
+            android:paddingLeft="5dp"
+            android:clickable="true"/>
+</LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/linearLayout"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|left"
+            android:layout_weight="1"
+            android:text="17"
+            android:id="@+id/date"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="MAY"
+            android:id="@+id/month"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2015"
+            android:gravity="center_vertical|top"
+            android:id="@+id/year"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/linearLayout"
+     ></LinearLayout>
+
+
+
+</RelativeLayout>
+<!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/layout/calender_view.xml -->

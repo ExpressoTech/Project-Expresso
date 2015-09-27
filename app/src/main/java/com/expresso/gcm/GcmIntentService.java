@@ -8,8 +8,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.NotificationCompat;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.expresso.activity.LandingScreen;
+import com.expresso.activity.R;
+import com.google.android.gms.gcm.GcmListenerService;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import org.json.JSONException;
@@ -19,14 +24,12 @@ import org.json.JSONObject;
 /**
  * Created by Akshay on 18/6/15.
  */
-public class GcmIntentService extends IntentService {
+public class GcmIntentService extends GcmListenerService {
     private Handler handler;
     public GcmIntentService() {
-        super("GcmIntentService");
         handler=new Handler();
     }
 
-    @Override
     protected void onHandleIntent(Intent intent) {
         Bundle bundle=intent.getExtras();
         GoogleCloudMessaging gcm=GoogleCloudMessaging.getInstance(this);
@@ -49,45 +52,53 @@ public class GcmIntentService extends IntentService {
                     MESSAGE_TYPE_MESSAGE.equals(messageType)) {
             }
         }
+     /*   generateLoginNotification(this, "Expresso App","Hi");*/
 
+    }
 
+    public void onMessageReceived(String from, Bundle data) {
+        sendNotification("Received: " + data.toString());
+    }
+
+    private void sendNotification(String msg) {
+        Log.e("msg",msg.toString());
     }
 
 
 
 
-    private void generateLoginNotification(Context context, String type, String message) {
-        /*Intent notificationIntent = null;
+    /*private void generateLoginNotification(Context context, String type, String message) {
+        Intent notificationIntent = null;
         String title;
         long when = System.currentTimeMillis();
         NotificationManager notificationManager = (NotificationManager) context
                 .getSystemService(Context.NOTIFICATION_SERVICE);
         if(type.equalsIgnoreCase(context.getResources().getString(R.string.no_alarm_set_type))) {
             title="No Alarm Set";
-            notificationIntent = new Intent(context, HomeActivity.class);
+            notificationIntent = new Intent(context, LandingScreen.class);
             notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         } else {
             title="Not LoggedIn";
-            notificationIntent = new Intent(context, HomeActivity.class);
+            notificationIntent = new Intent(context, LandingScreen.class);
             notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         }
 
         PendingIntent pendingIntent = null;
-        pendingIntent = PendingIntent.getActivity(context, AlarmConfig.LOGIN_NOTIFICATION_ID, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        pendingIntent = PendingIntent.getActivity(context, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
         builder.setContentText(message);
         builder.setContentIntent(pendingIntent);
 
         builder.setContentTitle(title);
-        builder.setSmallIcon(R.drawable.splash_applogo);
+        builder.setSmallIcon(R.drawable.ic_launcher);
 
         Notification notification = builder.build();
         notification.when = when;
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
 
-        notificationManager.notify(AlarmConfig.LOGIN_NOTIFICATION_ID,notification);*/
+        notificationManager.notify(0,notification);
 
-    }
+    }*/
 
 }

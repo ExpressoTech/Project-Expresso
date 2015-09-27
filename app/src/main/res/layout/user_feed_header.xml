@@ -1,36 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_userImage"
-            app:border_color="#FF000000"
-            app:border_width="1dp"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/margin_medium"
+            android:clickable="true"
             android:padding="@dimen/padding_medium"
-            android:src="@drawable/ic_launcher" />
+            app:border_color="#FF000000"
+            app:border_width="1dp" />
 
-        <TextView
-            android:id="@+id/tv_feedage"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:drawableLeft="@drawable/clock"
-            android:drawablePadding="10dp"
-            android:gravity="center"
-            android:padding="@dimen/padding_medium"
-            android:text="3 min ago"
-            android:textColor="@android:color/darker_gray" />
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_privacy"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/public_icon" />
+
+            <TextView
+                android:id="@+id/tv_feedage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/clock"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:padding="@dimen/padding_small"
+                android:text="3 min ago"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/tv_username"
@@ -38,11 +57,23 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/iv_userImage"
-            android:text="Project Expresso"
+            android:clickable="true"
             android:padding="@dimen/padding_medium"
+            android:text="Project Expresso"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_username"
+            android:clickable="true"
+            android:padding="@dimen/padding_large"
+            android:visibility="gone"
+            android:src="@drawable/user" />
 
     </RelativeLayout>
 </LinearLayout>

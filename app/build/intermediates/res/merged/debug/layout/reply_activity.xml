@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent" >
+
+    <!-- Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_header"
+            layout="@layout/toolbar_layout"></include>
+
+        <include
+            layout="@layout/user_feed_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"></include>
+
+    </RelativeLayout>
+
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/et_reply"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:padding="@dimen/padding_large"
+            android:hint="@string/add_reply"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:layout_toLeftOf="@+id/btn_post"
+            android:layout_toStartOf="@+id/btn_post" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_large"
+            android:textColor="@color/white"
+            android:background="@color/accent_material_light"
+            android:text="POST"
+            android:id="@+id/btn_post" />
+
+    </RelativeLayout>
+
+    <!-- Scrollable Item below header and above footer -->
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/replyListview"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:dividerHeight="10dp"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@android:color/white"
+        android:layout_weight="6">
+
+        </ListView>
+
+</RelativeLayout><!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/layout/reply_activity.xml -->

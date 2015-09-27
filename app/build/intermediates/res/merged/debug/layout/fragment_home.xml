@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff" >
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview_feeds">
+
+    </ListView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_newFeed"
+        android:src="@drawable/add"
+        android:visibility="gone"
+        android:layout_margin="@dimen/margin_large"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/right_labels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_addButtonColorNormal="@color/red"
+        fab:fab_addButtonColorPressed="@color/red"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        fab:fab_addButtonSize="normal"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        >
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_drafts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_title="View Drafts"
+            fab:fab_labelStyle="@style/menu_labels_style"
+            fab:fab_size="normal"
+            fab:fab_stroke_visible="true"
+            fab:fab_colorPressed="@color/white"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_size="normal"
+            fab:fab_labelStyle="@style/menu_labels_style"
+            fab:fab_title="Create GEO Message"
+            fab:fab_colorPressed="@color/white"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_story"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/white"
+            fab:fab_title="Create Story"
+            fab:fab_labelStyle="@style/menu_labels_style"
+            fab:fab_size="normal"
+            fab:fab_stroke_visible="true"
+            fab:fab_colorPressed="@color/white"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout><!-- From: file:/C:/GitHub/Project-Expresso-master/app/src/main/res/layout/fragment_home.xml -->

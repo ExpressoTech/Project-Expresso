@@ -62,8 +62,8 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
         super.onCreate(savedInstanceState);
         mUserLearnedDrawer = Boolean.valueOf(readSharedSetting(getActivity(), PREF_USER_LEARNED_DRAWER, "false"));
         if (savedInstanceState != null) {
-            mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
-            mFromSavedInstanceState = true;
+          /*  mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
+            mFromSavedInstanceState = true;*/
         }
     }
 
@@ -116,7 +116,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
         };
 
         if (!mUserLearnedDrawer && !mFromSavedInstanceState)
-            mDrawerLayout.openDrawer(mFragmentContainerView);
+        //    mDrawerLayout.openDrawer(mFragmentContainerView);
 
         mDrawerLayout.post(new Runnable() {
             @Override
